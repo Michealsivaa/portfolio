@@ -1,0 +1,22 @@
+// Header section style here 
+.header {
+    border-color: #050a14!important;
+    filter: brightness(1.5);
+    background-color: #050a14;
+    position: fixed;
+    z-index: 1001;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    .logo-section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .menu-section {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

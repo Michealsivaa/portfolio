@@ -1,0 +1,15 @@
+.inner-menu {
+    display: flex;
+    align-items: center;
+}
+.menu-list {
+    color: white;
+    display: block;
+    margin: 0 48px 0 0;
+    text-decoration: none;
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
