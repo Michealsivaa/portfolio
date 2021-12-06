@@ -1,8 +1,10 @@
+@import '../../sui/styles/includes';
+
 // Header section style here 
 .header {
-    border-color: #050a14!important;
+    border-color: $primary-color !important;
     filter: brightness(1.5);
-    background-color: #050a14;
+    background-color: $primary-color ;
     position: fixed;
     z-index: 1001;
     padding: 10px;

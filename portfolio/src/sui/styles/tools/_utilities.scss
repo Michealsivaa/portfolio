@@ -1,0 +1,1070 @@
+/* ==========================================================================
+   Tools
+    - Globally-available tools, public utilities
+   ========================================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+p,h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Flex basis styles here */
+.flex {
+  &-1 {
+    flex: 1;
+  }
+
+  &-sm {
+    flex: 1.5;
+  }
+
+  &-2 {
+    flex: 2;
+  }
+
+  &-xs {
+    flex: 1.3;
+  }
+}
+
+/* Heading and sub heading styles here */
+h1 {
+  &.heading {
+    @include font(44px, normal, 700, $grey-lighten1);
+  }
+}
+
+h4 {
+  &.title {
+    @include font(24px, 32px, 600, $text-grey-primary);
+  }
+}
+
+h5 {
+  &.heading {
+    @include font(20px, normal, bold, $text-grey-primary);
+  }
+
+  &.heading-small {
+    @include font(18px, normal, bold, $text-grey-secondary);
+
+    &.letter-spacing {
+      letter-spacing: 0.26px;
+    }
+  }
+}
+
+h5.title {
+  @include font(20px, 28px, 600, $text-grey-primary);
+}
+
+h6 {
+  &.heading {
+    @include font(16px, 22px, 700, $text-grey-primary);
+  }
+  &.sub-heading {
+    @include font(16px, 22px, 600, $text-grey-primary);
+  }
+}
+
+p, span {
+  &.header {
+    @include font(14px, 20px, 700, $text-grey-primary);
+  }
+
+  &.sub-header {
+    @include font(14px, 20px, 600, $text-grey-primary);
+  }
+
+  &.summary {
+    @include font(14px, 20px, normal, $text-grey-hint);
+  }
+  
+  &.title {
+    @include font(13px, 18px, 600, $text-grey-hint);
+  }
+
+  &.sub-title {
+    @include font(13px, 18px, 700, $text-grey-primary);
+  }
+
+  &.hint {
+    @include font(12px, 16px, normal, $grey-darken1);
+  }
+}
+
+.medium-two {
+  @include font(12px, normal, 600, $text-grey-secondary);
+}
+
+.summary-medium {
+  @include font(16px, 29px, normal, $grey-darken1);
+}
+
+.heading {
+  @include font(14px, 21px, 500, $text-grey-secondary);
+}
+
+.login {
+  @include font(13px, 20px, 600, $text-grey-primary);
+}
+
+.small {
+  @include font(12px, normal, normal, $text-grey-hint);
+
+  &.letter-spacing {
+    letter-spacing: 0.17px;
+  }
+
+  &.red-text {
+    color: $red-lighten1;
+  }
+}
+
+.medium {
+  @include font(15px, 24px, 500, $text-grey-primary);
+}
+
+.small-one {
+  @include font(13px, 21px, normal, $text-grey-hint);
+
+  &.w-adjust {
+    max-width: 320px;
+  }
+}
+
+.small-two {
+  @include font(11px, 20px, 500, $text-grey-hint);
+}
+
+.small-four {
+  @include font(10px, normal, normal, $text-grey-hint)
+}
+
+.small-three {
+  @include font(10px, 20px, 600, $text-grey-secondary);
+}
+
+.small-red {
+  @include font(13px, 21px, normal, $red);
+}
+
+/* Text truncate */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Text color styles here */
+.txt {
+  &-primary {
+    color: $text-grey-primary !important;
+  }
+
+  &-secondary {
+    color: $text-grey-secondary !important;
+  }
+
+  &-hint {
+    color: $text-grey-hint !important;
+  }
+
+  &-orange {
+    color: $primary-color !important;
+  }
+
+  &-blue {
+    color: $blue !important;
+  }
+
+  &-darken1 {
+    color: $grey-darken1 !important;
+  }
+
+  &-secondary-blue {
+    color: $secondary-color !important;
+  }
+
+  &-blue-darken1 {
+    color: $blue-darken1 !important;
+  }
+
+  &-blue-darken2 {
+    color: $blue-darken2 !important;
+  }
+
+  &-blue-darken4 {
+    color: $blue-darken4 !important;
+  }
+
+  &-white {
+    color: $white !important;
+  }
+
+  &-blue-darken4 {
+    color: $blue-darken4 !important;
+  }
+
+  &-red {
+    color: $red !important;
+  }
+
+  &-red-lighten1 {
+    color: $red-lighten1 !important;
+  }
+
+  &-darken2 {
+    color: $grey-darken2 !important;
+  }
+}
+
+/* font weight styles here */
+.font {
+  &-300 {
+    font-weight: 300 !important;
+  }
+
+  &-600 {
+    font-weight: 600 !important;
+  }
+
+  &-800 {
+    font-weight: 800 !important;
+  }
+
+  &-normal {
+    font-weight: normal !important;
+  }
+
+  &-bold {
+    font-weight: bold !important;
+  }
+}
+
+/* font size styles here */
+.size {
+  &-7 {
+    font-size: 7px !important;
+  }
+
+  &-13 {
+    font-size: 13px !important;
+  }
+
+  &-14 {
+    font-size: 14px !important;
+  }
+
+  &-16 {
+    font-size: 16px !important;
+  }
+
+  &-17 {
+    font-size: 17px !important;
+  }
+
+  &-20 {
+    font-size: 20px !important;
+  }
+
+  &-22 {
+    font-size: 22px !important;
+  }
+
+  &-24 {
+    font-size: 24px !important;
+  }
+}
+
+/* line height normal section style here */
+.line-normal {
+  line-height: normal !important;
+}
+
+.line-18 {
+  line-height: 18px !important;
+}
+
+.line-158 {
+  line-height: 1.58 !important;
+}
+
+.line-154 {
+  line-height: 1.54 !important;
+}
+
+.line-10 {
+  line-height: 10px !important;
+}
+
+.line-15 {
+  line-height: 1.5 !important;
+}
+
+.line-172 {
+  line-height: 1.72 !important;
+}
+
+.line-175 {
+  line-height: 1.75 !important;
+}
+
+.line-169 {
+  line-height: 1.69 !important;
+}
+
+.line-164 {
+  line-height: 1.64 !important;
+}
+
+.line-183 {
+  line-height: 1.83 !important;
+}
+
+.line-23 {
+  line-height: 23px !important;
+}
+
+.line-22 {
+  line-height: 22px !important;
+}
+
+.line-157 {
+  line-height: 1.57 !important;
+}
+
+.line-167 {
+  line-height: 1.67 !important;
+}
+
+.line-24 {
+  line-height: 24px !important;
+}
+
+.line-20 {
+  line-height: 20px !important;
+}
+
+.line-32 {
+  line-height: 32px !important;
+}
+
+/* Letter spacing section style here */
+.letter {
+  &-s02 {
+    letter-spacing: 0.2px;
+  }
+
+  &-s23 {
+    letter-spacing: 0.23px;
+  }
+
+  &-s17 {
+    letter-spacing: 0.17px;
+  }
+
+  &-s19 {
+    letter-spacing: 0.19px;
+  }
+
+  &-s26 {
+    letter-spacing: 0.26px;
+  }
+}
+
+/* Cursor styles here */
+.cursor {
+  &-pointer {
+    cursor: pointer !important;
+  }
+
+  &-default {
+    cursor: default !important;
+  }
+
+  &-not-allowed {
+    cursor: not-allowed !important;
+  }
+
+  &-none {
+    pointer-events: none !important;
+  }
+}
+
+.main-content {
+  width: calc(100vw - 64px);
+}
+
+/* width percentage section style here */
+.w-62 {
+  width: 62% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-370 {
+  width: 370px !important;
+}
+
+.w-fit {
+  width: fit-content !important;
+}
+
+.w-200 {
+  width: 200px !important;
+}
+
+.w-186 {
+  width: 186px !important;
+}
+
+.w-20px {
+  width: 20px !important;
+}
+
+.w-36px {
+  width: 36px !important;
+}
+
+.w-250 {
+  width: 250px !important;
+}
+
+.w-452 {
+  width: 452px !important;
+}
+
+.w-456 {
+  width: 456px !important;
+}
+
+/* border radius styles here */
+.border-radius-2 {
+  border-radius: 2px !important;
+}
+
+.border-radius-medium {
+  border-radius: 4px;
+}
+
+.border-radius-large {
+  border-radius: 8px;
+}
+
+/* Button focus seciton style here */
+button:focus {
+  outline: none !important;
+}
+
+/* outline none styles here */
+
+.outline-none {
+  outline: none;
+}
+
+/* Table dp class here */
+.table-dpBlue {
+  color: $dp-blue !important;
+}
+
+.table-dpBlue-bg {
+  background-color: $dp-blue-lighten !important;
+}
+
+.table-dpViolet {
+  color: $dp-violet !important;
+}
+
+.table-dpViolet-bg {
+  background-color: $dp-violet-lighten !important;
+}
+
+.table-dpRed {
+  color: $dp-red !important;
+}
+
+.table-dpRed-bg {
+  background-color: $dp-red-lighten !important;
+}
+
+.table-dpGreen {
+  color: $dp-green !important;
+}
+
+.table-dpGreen-bg {
+  background-color: $dp-green-lighten !important;
+}
+
+.table-dpOrange-bg {
+  background-color: $dp-orange-lighten;
+}
+
+/* Background none section style here */
+.bg-none {
+  background: none !important;
+}
+
+/* Anchor section style here */
+a {
+  text-decoration: none !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+/* truncate section style here */
+.table-truncate {
+  width: 160px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &.group-dropdown {
+    width: 220px !important;
+  }
+
+  &.group-filter-truncate {
+    width: 90px !important;
+  }
+
+  &.pipeline-dropdown {
+    width: 194px;
+  }
+
+  &.stage-name-truncate {
+    width: 160px !important;
+  }
+
+  &.timeline-lead-stage-truncate {
+    width: 114px !important;
+  }
+
+  &.table-lead-stage-truncate {
+    width: 100px !important;
+  }
+}
+
+/* Text wrap style here */
+.text-wrap {
+  word-break: break-all !important;
+}
+
+/* Button truncate section style here */
+.button-truncate {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* sidebar field background */
+.bg-blue {
+  background-color: $blue-lighten4;
+  color: $secondary-color;
+}
+
+/* Mui body typography section style here */
+.MuiTypography-body1 {
+  font-size: $font-size !important;
+}
+
+
+/* Error comp and accept reject invitation style here */
+.user-invitation-section,
+.user-invitation-error {
+  background: $grey-lighten3;
+  height: 100vh;
+
+  .primary-logo-section {
+    .primary-logo {
+      width: 130px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .invitation {
+    height: calc(100vh - 80px);
+
+    .i-details {
+      width: 480px;
+      padding: $spacer40 $spacer64 50px;
+      background: $white;
+      border: 1px solid $border;
+      @include border-radius(10px);
+    }
+  }
+}
+
+/* Button loader style here */
+.button-loader {
+  @include size(20px);
+  position: absolute;
+  right: 19px;
+}
+
+/* margin section style here */
+.m-b-2 {
+  margin-bottom: 2px;
+}
+
+.m-b-6 {
+  margin-bottom: 6px !important;
+}
+
+.m-l-6 {
+  margin-left: 6px !important;
+}
+
+.m-r-6 {
+  margin-right: 6px !important;
+}
+
+.m-b-10 {
+  margin-bottom: 10px !important;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-b-12 {
+  margin-bottom: 12px !important;
+}
+
+.m-t-12 {
+  margin-top: 12px !important;
+}
+
+.m-l-12 {
+  margin-left: 12px !important;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.m-x-12 {
+  margin-right: $spacer12 !important;
+  margin-left: $spacer12 !important;
+}
+
+.mr-13 {
+  margin-right: 13px !important;
+}
+
+.m-b-30 {
+  margin-bottom: 30px !important;
+}
+
+.mx-32 {
+  margin-right: $spacer32 !important;
+  margin-left: $spacer32 !important;
+}
+
+.mt-32px {
+  margin-top: 32px !important;
+}
+
+.mr-36 {
+  margin-right: 36px !important;
+}
+
+/* Padding styles here */
+.p-6 {
+  padding: 6px;
+}
+.p-b-12 {
+  padding-bottom: 12px !important;
+}
+.p-t-12 {
+  padding-top: 12px !important;
+}
+.p-r-12 {
+  padding-right: 12px !important;
+}
+.p-l-12 {
+  padding-left: 12px !important;
+}
+.p-12 {
+  padding: 12px !important;
+}
+
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pl-30 {
+  padding-left: 30px !important;
+}
+
+/* border styles starts here */
+
+.border {
+  border-color: $border !important;
+
+  &-right,
+  &-left,
+  &-top,
+  &-bottom {
+    border-color: $border !important;
+  }
+}
+
+/* user oval-image style here */
+
+.user-oval {
+  &-17 {
+    @include size(17px);
+  }
+
+  &-20 {
+    @include size(20px);
+  }
+
+  &-24 {
+    @include size(24px);
+  }
+
+  &-30 {
+    @include size(30px);
+  }
+
+  &-44 {
+    @include size(44px);
+  }
+
+  &.activity-page {
+    box-shadow: 0 0 0 2px $white;
+    margin-left: -0.5rem;
+  }
+}
+
+.overlap-oval {
+  @include size(23px);
+  border: 3px solid $white;
+  margin-right: -8px;
+}
+
+.more-filter-list {
+  border: 1px solid $border;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $blue-lighten4;
+  }
+}
+
+.text-hover {
+  &:hover {
+
+    p,
+    svg {
+      color: $blue-darken4 !important;
+    }
+  }
+}
+
+.icon-hover {
+  @include size(30px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: rgba($grey-lighten1, 0.4);
+  }
+
+  &.small {
+    width: unset;
+    height: unset;
+    padding: 4px;
+    border-radius: 2px;
+  }
+}
+
+// Inside-scroll-drawer-drop-down
+.select-fields-button {
+  &.overflow-none {
+    .MuiMenu-paper {
+      overflow: unset !important;
+    }
+
+    .inside-scroll {
+      &.group-menu {
+        height: 126px;
+      }
+
+      max-height: 274px;
+      overflow: auto;
+    }
+  }
+}
+
+.popper-select {
+  &.overflow-none {
+    .inside-scroll {
+      max-height: 120px;
+      overflow: auto;
+    }
+
+    .scroll-company-name {
+      max-height: 120px !important;
+      overflow: auto;
+    }
+  }
+}
+
+.sticky-header {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: sticky;
+}
+
+.link-hover {
+  z-index: 0;
+  position: relative;
+  color: $blue !important;
+
+  &:hover {
+    color: $blue-darken4 !important;
+    text-decoration: underline !important;
+  }
+}
+
+/* done table loading width styles here */
+
+.table-loading {
+  width: 220px;
+}
+
+
+/* Drop zone section style here */
+.MuiDialog-root {
+  position: absolute !important;
+
+  .MuiDialog-scrollPaper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end !important;
+    margin-right: 76px !important;
+
+    .MuiDialog-paper {
+      margin: 0 !important;
+    }
+
+    // commented this block, will be used in future
+    // .MuiPaper-elevation24 {
+    //   box-shadow: none !important;
+    // }
+    .MuiDialogTitle-root {
+      padding: 0 !important;
+    }
+
+    .MuiDropzoneArea-root {
+      min-height: unset !important;
+      border: 1px dashed #005592 !important;
+    }
+
+    .MuiDropzoneArea-textContainer {
+      display: flex;
+      align-items: center;
+      background: #f2f6f9;
+      padding: 0px 24px;
+    }
+  }
+
+  .MuiBackdrop-root {
+    background-color: unset !important;
+  }
+
+  .MuiDialogActions-root .MuiDialogActions-spacing {
+    padding: 0 !important;
+  }
+
+  .MuiDialogContent-root {
+    padding: 0 !important;
+  }
+
+  .MuiDropzoneArea-text {
+    letter-spacing: normal;
+    @include font(14px, 1.71, 500, #0e8ebf);
+    order: 2;
+    margin-left: 18px;
+  }
+}
+
+.google-button {
+  background: $blue-darken5 !important;
+  border: 1px solid $blue-darken5 !important;
+  color: $white !important;
+  padding: 1px !important;
+
+  div {
+    @include size(44px);
+  }
+
+  span {
+    position: relative !important;
+    left: 74px !important;
+    font-family: $font-family;
+    @include font(16px, normal, bold !important, $white);
+  }
+}
+
+.google-calender-text {
+  .MuiTypography-body1 {
+    @include font(14px !important, normal !important, normal !important, $text-grey-secondary !important);
+  }
+}
+
+.google-calender-event {
+  p {
+    @include font(13px, 1.38, 600, $text-grey-primary);
+    letter-spacing: 0.2px;
+    margin-top: 12px;
+  }
+
+  .link-text {
+    @include font(12px, 1.5, 600, #3291c8);
+    margin-left: 28px;
+  }
+}
+
+/* pagination style here */
+.MuiPaginationItem-outlined {
+  border: 1px solid $border;
+  border-radius: 2px !important;
+  min-width: 30px;
+}
+
+/* Form control design fix */
+
+.truncate-label {
+  .MuiFormControlLabel-label {
+    width: 180px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.add-title {
+  @include font(14px, normal, bold !important, $blue-darken1 !important);
+  letter-spacing: 0.2px;
+}
+
+/* drawer background color style here */
+.MuiBackdrop-root {
+  background-color: rgba(32, 42, 54, 0.45) !important;
+}
+
+/* table-field trancate  starts here */
+.table-field-trancate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow: hidden;
+}
+
+/* date-picker cursor styles */
+.date-picker-cursor {
+  .MuiInputBase-root {
+    .MuiInputBase-input {
+      cursor: pointer;
+    }
+  }
+}
+
+/** Image styles here */
+.img-circle {
+  border-radius: 50%;
+}
+
+.img-centered {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+/** Icon hover styles here */
+.back-arrow-icon:hover {
+  transition: background-color 0.5s ease-out;
+  background-color: $grey-darken3;
+}
+
+.icon-hover-bg:hover {
+  transition: background-color 0.5s ease-out;
+  background-color: $grey-darken3;
+}
+
+/** Empty page title and summary styles here */
+.empty-message {
+  @include font(18px, 24px, 600, $text-grey-primary);
+  letter-spacing: -0.11px;
+}
+
+.empty-summary {
+  @include font(13px, 20px, normal, $text-grey-hint);
+  letter-spacing: -0.08px;
+}
+
+.empty-title {
+  @include font(14px, 20px, 600, $text-grey-primary);
+  letter-spacing: -0.09px;
+}
+
+.empty-info {
+  @include font(13px, 18px, normal, $grey-darken1);
+  letter-spacing: -0.08px;
+}
+
+/** Width styles here */
+.m-w-300 {
+  max-width: 300px;
+}
+
+.m-w-202 {
+  max-width: 202px;
+}
+
+/** Border styles here */
+.border-grey {
+  border: 1px solid $border;
+}
+
+.border-grey-darken {
+  border: 1px solid $grey-darken3;
+}
+
+/** comming soon design **/
+.coming-soon {
+  @include font(14px, normal, 600, $secondary-color);
+  background-color: $blue-lighten4;
+  border: 1px solid $blue-lighten3;
+  text-align: center;
+  padding: 10px 16px;
+}

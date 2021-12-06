@@ -1,0 +1,319 @@
+.MuiTableContainer-root {
+  box-shadow: none !important;
+  max-height: calc(100vh - 252px);
+  border: 1px solid $border !important;
+  border-radius: 0 !important;
+  .MuiTableCell-head {
+    @include font(13px, normal, 600, $text-grey-secondary !important);
+    text-transform: capitalize;
+  }
+  .MuiTableCell-body {
+    @include font(13px, normal, 400, $text-grey-secondary !important);
+    &.name-field {
+      font-weight: 700;
+      color: $text-grey-primary !important;
+    }
+  }
+  .MuiTableHead-root {
+    background-color: $grey-lighten3;
+    .MuiTableCell-head {
+      white-space: nowrap !important;
+    }
+  }
+  .MuiTableRow-root {
+    border-bottom: 1px solid $border !important;
+  }
+  .MuiTableCell-root {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap !important;
+    font-family: $font-family !important;
+    white-space: nowrap !important;
+    padding: $spacer3 $spacer10 !important;
+  }
+  .MuiTableCell-stickyHeader {
+    background-color: $grey-lighten3 !important;
+  }
+
+  /* leads and contact tabel checkbox and profilepic styles here */
+
+  .lead-image-head, .lead-image-row {
+    min-width: 40px !important;
+    width: 40px !important;
+    padding: 0 !important;
+  }
+  .leadstatus-head {
+    padding-left: 10px !important;
+  }
+
+  /* dashboar-table default fields styles here */
+
+  .first-name-head,
+  .last-name-head,
+  .leadstatus-head .email-head,
+  .company-name-head,
+  .first-name-row,
+  .last-name-row,
+  .leadstatus-row,
+  .email-row,
+  .company-name-row {
+    p {
+      max-width: 275px;
+    }
+  }
+  .email-row {
+    a {
+      color: $blue !important;
+      &:hover,
+      &:focus {
+        color: $blue-darken4 !important;
+      }
+    }
+  }
+}
+
+/* drawer table styles here */
+
+.drawer-content {
+  .MuiTableContainer-root {
+    .MuiTableCell-root {
+      height: 48px;
+      min-width: unset !important;
+      padding: 11px 24px !important;
+      &.record_btn {
+        padding-right: 0px !important;
+      }
+    }
+  }
+}
+
+.drawer-content {
+  .MuiTableContainer-root {
+    .MuiTableCell-root {
+      padding: 8px 16px !important;
+    }
+  }
+}
+
+/* dashboard-table styles Here */
+
+.dashboard-list-table,
+.activity-list-table {
+  .MuiTableCell-root {
+    min-width: 200px;
+    max-width: 275px;
+  }
+  &.table-action-wrapper {
+    max-height: calc(100vh - 286px);
+  }
+  &.isImportFiltered {
+    max-height: calc(100vh - 324px);
+  }
+  th {
+    white-space: nowrap;
+  }
+  &.deals-board-design {
+    overflow: auto;
+    height: calc(100vh - 206px);
+  }
+  &.without-pagination {
+    max-height: calc(100vh - 206px);
+  }
+  th:nth-child(1) {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: $grey-lighten3;
+    min-width: 54px !important;
+    width: 54px !important;
+  }
+  th:nth-child(2) {
+    position: sticky;
+    left: 54px;
+    top: 0;
+    z-index: 9;
+    background: $grey-lighten3;
+  }
+  th:nth-child(3) {
+    position: sticky;
+    left: 94px;
+    top: 0;
+    z-index: 8;
+    background: $grey-lighten3;
+  }
+  .table-body {
+    .table-row {
+      td:nth-child(1) {
+        position: sticky;
+        left: 0;
+        z-index: 4;
+        background: $white;
+        min-width: 30px !important;
+        width: 30px !important;
+      }
+      td:nth-child(2) {
+        position: sticky;
+        left: 54px;
+        z-index: 3;
+        background: $white;
+      }
+      td:nth-child(3) {
+        position: sticky;
+        left: 94px;
+        z-index: 2;
+        background: $white;
+      }
+      &:hover,
+      &.isHovered {
+        .threeDot {
+          visibility: visible;
+          cursor: pointer;
+        }
+        background-color: $grey-lighten3;
+        td:nth-child(1),
+        td:nth-child(2),
+        td:nth-child(3) {
+          background-color: $grey-lighten3;
+        }
+      }
+    }
+  }
+}
+
+/* import table styes here */
+
+.import-list-table {
+  max-height: calc(100vh - 196px);
+  .MuiTableCell-root {
+    min-width: 200px;
+    max-width: 275px;
+    height: 48px;
+    padding: 11px 24px !important;
+    &.record_btn {
+      padding-right: 0px !important;
+    }
+  }
+  &.without-pagination {
+    max-height: calc(100vh - 150px);
+  }
+}
+
+/* import drawer table styles here */
+
+.import-files-section {
+  .MuiTableContainer-root {
+    max-height: calc(100vh - 316px);
+    .MuiTable-root {
+      min-width: 100%;
+      .MuiTableCell-root {
+        min-width: 200px;
+        max-width: 275px;
+        min-height: 40px;
+        height: 100%;
+      }
+      .MuiTableCell-head {
+        @include font(
+          12px !important,
+          normal !important,
+          600 !important,
+          $text-grey-hint !important
+        );
+      }
+    }
+  }
+}
+
+/* settings Table styles here */
+
+.settings {
+  .settings-content {
+    .MuiTableCell-root {
+      height: 48px;
+      min-width: 200px;
+      max-width: 275px;
+      &.group-drag-section {
+        padding: 4px 0px 4px 12px !important;
+        min-width: 54px;
+        width: 54px;
+      }
+    }
+  }
+  .customized-table {
+    .group-drag-section {
+      min-width: 24px !important;
+      width: 24px !important;
+    }
+  }
+  .MuiTableContainer-root {
+    max-height: calc(100vh - 282px);
+    &.fields-list-table {
+      max-height: calc(100vh - 354px);
+    }
+    &.group-list-table {
+      max-height: calc(100vh - 334px);
+      th {
+        &:first-child {
+          position: sticky;
+          z-index: 10;
+          left: 0px;
+          top: 0px;
+          background: $grey-lighten3;
+          min-width: 54px !important;
+          width: 54px !important;
+        }
+        &:nth-child(2) {
+          position: sticky;
+          background: $grey-lighten3;
+          left: 54px !important;
+          top: 0px !important;
+          z-index: 9;
+        }
+      }
+      td {
+        &:first-child {
+          position: sticky;
+          z-index: 6;
+          left: 0px;
+          min-width: 54px !important;
+          width: 54px !important;
+          background-color: $white;
+        }
+        &:nth-child(2) {
+          position: sticky;
+          z-index: 5;
+          left: 54px !important;
+          background-color: $white;
+        }
+      }
+      &.table-action-wrapper {
+        max-height: calc(100vh - 390px);
+      }
+    }
+  }
+}
+
+.user-list-table, .team-list-table, .role-list-table, .import-list-table, .fields-list-table {
+  .MuiTableCell-root {
+    min-width: 200px;
+    max-width: 275px; 
+  }
+  th {
+    &:first-child {
+      position: sticky !important;
+      z-index: 10;
+      left: 0px;
+      top: 0px;
+      background: $grey-lighten3;
+    }
+  }
+  td {
+    position: unset !important;
+    &:first-child {
+      position: sticky !important;
+      z-index: 6;
+      left: 0px;
+      background-color: $white;
+    }
+  }
+}

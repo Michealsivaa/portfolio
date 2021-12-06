@@ -1,0 +1,86 @@
+/* Mui Select text box style overwrite here */
+.MuiTextField-root {
+  .MuiInput-underline:before, .MuiInput-underline:after {
+    content: none;
+  }
+
+  .MuiSelect-select {
+    padding: $spacer9 $spacer16;
+    border: solid 1px $border;
+    @include border-radius(2px);
+    @include font(14px, 20px, normal, $text-grey-primary);
+    height: auto;
+    font-family: $font-family;
+
+    &.MuiSelect-selectMenu {
+      padding-right: $spacer32;
+    }
+
+    &.Mui-disabled {
+      border: solid 1px $grey-lighten1;
+      background-color: $grey-lighten2;
+      color: $grey-darken1;
+    }
+  }
+
+  .MuiInputBase-root.Mui-error .MuiSelect-selectMenu {
+    border: solid 1px $red;
+  }
+
+  .MuiFormHelperText-root {
+    @include font(12px, normal, 600, $red !important);
+    margin: $spacer6 0 0 0 !important;
+    font-family: $font-family !important;
+  }
+
+  .MuiSelect-icon {
+    right: 8px;
+    color: $text-grey-hint;
+
+    &.Mui-disabled {
+      color: $text-grey-hint;
+    }
+  }
+
+  &.padding-adjust-40 {
+    .MuiSelect-select {
+      padding: $spacer9 $spacer16 !important;
+    }
+  }
+}
+
+.MuiFormControl-root.select-menu {
+  width: 100%;
+
+  .MuiOutlinedInput-notchedOutline {
+    border: none;
+  }
+
+  .MuiInputBase-root {
+    .MuiInputBase-input {
+      padding: 10.5px $spacer16;
+      border: solid 1px $border;
+      @include border-radius(2px);
+      @include font(14px, 20px, normal, $text-grey-primary);
+      height: auto;
+      font-family: $font-family;
+      background: $white;
+    }
+
+    &.lead-field-select {
+      .MuiInputBase-input {
+        padding: 1px 16px !important;
+      }
+    }
+
+    &.Mui-disabled {
+      border: solid 1px $grey-lighten1;
+      background-color: $grey-lighten2;
+    }
+
+    &.Mui-error {
+      border: solid 1px $red;
+      background-color: $white !important;
+    }
+  }
+}

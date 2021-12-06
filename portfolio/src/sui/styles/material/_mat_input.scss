@@ -1,0 +1,364 @@
+/* Mui Input text box style overwrite here */
+.MuiInputBase-input {
+  font-family: $font-family !important;
+
+  &::-webkit-input-placeholder, &::placeholder {
+    color: $grey-darken1 !important;
+    opacity: 1 !important;
+  }
+}
+
+.MuiTextField-root {
+  width: 100%;
+
+  .MuiOutlinedInput-notchedOutline {
+    border: none;
+  }
+
+  .MuiInputBase-input {
+    padding: $spacer9 $spacer12;
+    border: solid 1px $border;
+    @include border-radius(2px);
+    @include font(14px, 20px, 600, $text-grey-primary);
+    height: auto;
+    background: $white;
+  }
+
+  .MuiOutlinedInput-root {
+    &.Mui-focused .MuiInputBase-input {
+      border: solid 1px $secondary-color;
+      background-color: $white;
+    }
+
+    &.Mui-error .MuiInputBase-input {
+      border: solid 1px $red;
+      background-color: $red-lighten3;
+    }
+
+    &.error-icon {
+      &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(/img/error-icon.svg);
+        @include positionTopRight(absolute, 10px, 13px);
+      }
+    }
+
+    &.success-icon {
+      &:after {
+        content: "";
+        width: 18px;
+        height: 14px;
+        background-image: url(/img/success.svg);
+        @include positionTopRight(absolute, 13px, 13px);
+      }
+    }
+
+    &.Mui-disabled .MuiInputBase-input {
+      border: solid 1px $grey-lighten1;
+      background-color: $grey-lighten2;
+    }
+  }
+
+  &.icon-group-input {
+    position: relative;
+
+    .MuiInputBase-input {
+      padding-right: $spacer36;
+    }
+
+    .MuiOutlinedInput-adornedEnd {
+      padding-right: 0;
+    }
+
+    .MuiSvgIcon-root {
+      @include positionTopRight(absolute, 11px, 8px);
+      @include icon(20px, $grey-darken1);
+      cursor: pointer;
+    }
+  }
+
+  .MuiFormHelperText-contained {
+    @include font(12px, normal, 600, $red !important);
+    margin: $spacer6 0 0 0 !important;
+    font-family: $font-family !important;
+  }
+
+  &.register {
+    .MuiInputBase-input {
+      border: 1px solid transparent;
+      background-color: $grey-lighten3;
+      padding: $spacer12 $spacer40 $spacer12 $spacer12;
+      border-radius: $spacer4;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      color: $text-grey-secondary !important;
+    }
+
+    .MuiOutlinedInput-root {
+      &.Mui-focused .MuiInputBase-input {
+        border: solid 1px $secondary-color !important;
+        background-color: $white !important;
+      }
+
+      &.Mui-error .MuiInputBase-input {
+        border: solid 1px $red;
+        background-color: $red-lighten3;
+      }
+
+      &.Mui-disabled .MuiInputBase-input {
+        border: solid 1px $grey-lighten1;
+        background-color: $grey-lighten2;
+      }
+    }
+
+    &.without-icon {
+      .MuiOutlinedInput-root {
+        border-radius: $global-border-radius-minimal;
+      }
+
+      .MuiInputBase-input {
+        padding: $spacer11 $spacer12 $spacer10 $spacer12;
+        @include font(14px, 1.57, 600, $text-grey-secondary !important);
+        letter-spacing: 0.2px;
+      }
+
+      &.custom-textarea-font {
+        .MuiInputBase-input {
+          @include font(12px !important, 1.67, 600, $text-grey-secondary);
+          letter-spacing: 0.17px !important;
+        }
+      }
+
+      &.transparent-bg {
+        .MuiInputBase-input {
+          background: transparent;
+          border: 1px solid $border;
+        }
+      }
+    }
+  }
+
+  &.Mui-greybg .MuiInputBase-input {
+    border: solid 1px $grey-lighten3;
+    background-color: $grey-lighten3;
+    border-radius: $global-border-radius-minimal;
+  }
+
+  &.input-blue-bg {
+    .MuiInputBase-input {
+      background-color: $grey-lighten3 !important;
+      border: 1px solid $grey-lighten3 !important;
+      color: $blue !important;
+    }
+
+    &.error-message {
+      .MuiInputBase-input {
+        border-color: $red !important;
+      }
+    }
+  }
+}
+
+/* Form control styles here */
+.form-control-section {
+  width: 100%;
+
+  .MuiOutlinedInput-notchedOutline {
+    border: none;
+  }
+
+  .MuiInputBase-formControl {
+    border: solid 1px $border;
+  }
+
+  .MuiInputBase-input {
+    border: none;
+    @include font(14px, 21px, 600, $text-grey-primary);
+    padding: $spacer15;
+  }
+
+  .MuiInputBase-formControl {
+    &.Mui-focused {
+      border: solid 1px $secondary-color;
+      background-color: $white !important;
+    }
+
+    &.Mui-error {
+      border: solid 1px $red;
+      background-color: $red-lighten3;
+    }
+
+    &.Mui-disabled {
+      border: solid 1px $grey-lighten1;
+      background-color: $grey-lighten2;
+    }
+  }
+
+  &.search-input {
+    width: 100%;
+    min-width: 200px;
+
+    .MuiInputBase-input {
+      @include font(14px, normal, 600, $text-grey-primary !important);
+    }
+
+    .MuiOutlinedInput-input {
+      padding: $spacer11 0 !important;
+      border-radius: $global-border-radius-minimal;
+    }
+
+    .MuiOutlinedInput-adornedStart {
+      padding-left: $spacer10 !important;
+      border: solid 1px $grey-lighten3;
+      background-color: $grey-lighten3;
+
+      &:hover, &:focus, &:focus-within {
+        border: 1px solid $grey-darken2;
+      }
+    }
+
+    .MuiIconButton-root {
+      padding: $spacer6;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 20px;
+      color: $text-grey-primary;
+      opacity: 0.65;
+    }
+
+    &.transparent-bg {
+      .MuiOutlinedInput-adornedStart {
+        background-color: transparent !important;
+      }
+    }
+
+    &.input-border-color {
+      .MuiOutlinedInput-adornedStart {
+        border: solid 1px $border;
+      }
+    }
+
+    .MuiIconButton-edgeEnd {
+      margin: 0 $spacer4 0 0 !important
+    }
+  }
+
+  .MuiSvgIcon-root {
+    @include font(20px, normal, normal, $grey-darken1);
+
+  }
+
+  &.register-form {
+    .MuiInputBase-formControl {
+      border: 1px solid transparent;
+      background-color: $grey-lighten3;
+
+      &.Mui-focused {
+        border: solid 1px $secondary-color !important;
+        background-color: $white !important;
+      }
+
+      &.Mui-error {
+        border: solid 1px $red;
+        background-color: $red-lighten3;
+      }
+
+      &.Mui-disabled {
+        border: solid 1px $grey-lighten1;
+        background-color: $grey-lighten2;
+      }
+    }
+  }
+
+  &.global-input {
+    border-radius: $global-border-radius-minimal !important;
+
+    .MuiInputBase-input {
+      padding: $spacer12 !important;
+    }
+
+    .p-l-0 {
+      .MuiInputBase-input {
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
+.MuiOutlinedInput-input {
+  border-radius: $global-border-radius-minimal;
+}
+
+.error-text {
+  @include font(12px, normal, 600, $red !important);
+  margin: $spacer6 0 0 0 !important;
+  font-family: $font-family !important;
+  letter-spacing: 0.03333em;
+}
+
+.info-text {
+  @include font(12px, normal, 400, $orange-darken1 !important);
+  margin: $spacer6 0 0 0 !important;
+  font-family: $font-family !important;
+  letter-spacing: 0.03333em;
+}
+
+/* Text area or Multiline section style here */
+.textArea {
+  .MuiOutlinedInput-multiline {
+    padding: 0 !important;
+  }
+}
+
+/* Mui formfield label style here */
+.form-label {
+  @include font(13px, 22px, normal, $text-grey-secondary);
+  letter-spacing: 0.19px;
+  display: table;
+  margin: 0 0 $spacer4 0;
+}
+
+/* Text area section style here */
+.note-section {
+  .text-area-section {
+    .MuiOutlinedInput-multiline {
+      padding: 0 !important;
+    }
+  }
+}
+
+/** Autocomplete styles starts here */
+.MuiAutocomplete-root {
+  .MuiFormControl-root {
+    margin: 0;
+
+    .MuiAutocomplete-inputRoot {
+      border: 1px solid $border;
+      padding: $spacer9 0 $spacer9 $spacer16 !important;
+      border-radius: $global-border-radius-minimal;
+
+      .MuiAutocomplete-input {
+        padding: 0 $spacer40 0 0 !important;
+        border: none;
+      }
+
+      .MuiAutocomplete-endAdornment {
+        right: 0;
+
+        .MuiButtonBase-root {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.Mui-focused {
+    .MuiAutocomplete-inputRoot {
+      border-color: $secondary-color;
+    }
+  }
+}

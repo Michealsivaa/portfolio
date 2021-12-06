@@ -1,0 +1,16 @@
+.MuiTooltip-popper {
+  .MuiTooltip-tooltip {
+    background: $text-grey-secondary;
+    @include font(10px, 16px, normal, $white);
+    font-family: $font-family, sans-serif;
+    padding: $spacer10 12px;
+    .tooltip-message {
+      @include font(11px, 1.45, normal, $white);
+    }
+    .MuiTooltip-arrow {
+      color: $text-grey-secondary;
+      font-size: 8px;
+    }
+  }
+}
+

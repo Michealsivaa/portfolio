@@ -1,0 +1,21 @@
+/* Material Radio Button style overwrite here */
+
+.MuiRadio-colorPrimary.Mui-checked {
+  color: $secondary-color !important;
+}
+.MuiRadio-colorPrimary:hover {
+  background-color: rgba($secondary-color, 0.04) !important;
+}
+.MuiRadio-colorPrimary.Mui-checked:hover {
+  background-color: rgba($secondary-color, 0.04) !important;
+}
+
+.MuiRadio-colorSecondary.Mui-checked {
+  color: $primary-color !important;
+}
+.MuiRadio-colorSecondary:hover {
+  color: rgba($primary-color, 0.04) !important;
+}
+.MuiRadio-colorSecondary.Mui-checked:hover {
+  background-color: rgba($primary-color, 0.04) !important;
+}

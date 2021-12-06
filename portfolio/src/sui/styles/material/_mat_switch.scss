@@ -1,0 +1,19 @@
+.MuiSwitch-track {
+  width: 44px !important;
+  height: 24px !important;
+  border-radius: $border-radius-rounded !important;
+  position: absolute;
+  right: 0;
+  top: 7px;
+  left: 7px;
+}
+.MuiSwitch-colorPrimary.Mui-checked {
+  color: $secondary-color;
+  .MuiSwitch-thumb {
+    background: $white !important;
+  }
+}
+.MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
+  background-color: $secondary-color !important;
+  opacity: 1 !important;
+}

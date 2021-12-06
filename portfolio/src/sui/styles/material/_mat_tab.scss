@@ -1,0 +1,51 @@
+.MuiAppBar-colorDefault {
+  background-color: $white !important;
+  box-shadow: none !important;
+  &:focus {
+    outline: none;
+  }
+}
+
+.MuiTabs-indicator {
+  height: 4px !important;
+  border-top-right-radius: 2px !important;
+  border-top-left-radius: 2px !important;
+  background-color: $secondary-color !important;
+}
+
+.Mui-selected {
+  span {
+    letter-spacing: 0.21px;
+    @include font(15px, normal, bold, $secondary-color);
+  }
+}
+
+.MuiTab-root {
+  margin: 0 !important;
+  font-family: $font-family !important;
+  text-transform: none !important;
+  @include font(14px, normal, 600 !important, $text-grey-hint !important);
+}
+
+.drawer-body {
+  .drawer-content {
+    .MuiTab-root {
+      min-width: 140px !important;
+    }
+  }
+}
+.settings-tabs {
+  border-bottom: 1px solid $border;
+  .MuiTab-root {
+    min-width: 100px !important;
+  }
+}
+.settings-customization-tabs {
+  padding-left: $spacer48;
+  margin-left: -24px;
+  margin-right: -24px;
+  border-bottom: 1px solid $border;
+}
+.drawer-tabs {
+  border-bottom: 1px solid $border;
+}

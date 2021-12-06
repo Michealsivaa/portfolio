@@ -1,0 +1,17 @@
+.MuiLinearProgress-colorPrimary {
+  background-color: $grey-lighten1 !important;
+}
+
+.MuiLinearProgress-barColorPrimary {
+  background-color: $primary-color !important;
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: $primary-color !important;
+}
+
+.resendInviteText-loader {
+  margin-left: 8px;
+  margin-bottom: -3px;
+  color: $primary-color !important;
+}
