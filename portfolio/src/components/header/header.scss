@@ -2,16 +2,13 @@
 
 // Header section style here 
 .header {
-    border-color: $primary-color !important;
+    border-color: $background !important;
     filter: brightness(1.5);
-    background-color: $primary-color ;
-    position: fixed;
+    background-color: $background ;
     z-index: 1001;
     padding: 10px;
-    width: 100%;
     display: flex;
     align-items: center;
-    top: 0;
     .logo-section {
         display: flex;
         align-items: center;
