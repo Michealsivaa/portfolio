@@ -9,13 +9,11 @@ const menu = (props) => {
     return(
         <div className="menu-section">
             <Grid container>
-                <Container>
-                    <Grid item className="inner-menu">
-                        <div className='menu-list'>About</div>
-                        <div className="menu-list">Contact</div>
-                        <Logo className="hamburger-icon" imagepath = {hamburger}/>
-                    </Grid>
-                </Container>
+                <Grid item className="inner-menu">
+                    <div className='menu-list'>About</div>
+                    <div className="menu-list">Contact</div>
+                    <Logo className="hamburger-icon" imagepath = {hamburger}/>
+                </Grid>
             </Grid>
         </div>
     )
