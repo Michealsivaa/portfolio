@@ -1,7 +1,7 @@
 @import "../../sui/styles/includes";
 
 .banner {
-    height: calc(100vh - 57px);
+    height: calc(100vh - 60px);
     background: linear-gradient( 119deg,rgba(0,0,0,.75),rgba(0,0,0,.85));
     position: relative;
     z-index: 1;
@@ -54,5 +54,11 @@
         background-attachment: fixed;
         opacity: .2;
         z-index: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-image-pattern {
+        display: none !important;
     }
 }
